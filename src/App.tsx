@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { HashRouter, Link, Route, Routes, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { Command, Wrench } from "lucide-react";
+import { Analytics } from "@vercel/analytics/react";
 import { Home } from "./pages/Home";
 import { ToolPage } from "./pages/ToolPage";
 import { CommandPalette } from "./components/CommandPalette";
@@ -114,6 +115,7 @@ function Shell() {
       <Footer />
       <CommandPalette open={paletteOpen} onClose={() => setPaletteOpen(false)} />
       <Toaster />
+      <Analytics />
     </div>
   );
 }
